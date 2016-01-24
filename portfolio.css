@@ -3,17 +3,17 @@
 	box-sizing: border-box;
 }
 
-#wrapper {
-	position: realtive;
-	margin-top: -20px;
-}
-
 header {
-	background: #33ccff;
+	background: #000;
+}
+header h1 {
+	padding:10px;
+	color: #33ccff;
+	margin: 0px;
 }
 
 #sidebar-wrapper {
-	padding-bottom: 100px;
+
 }
 
 .social_icons {
@@ -45,6 +45,10 @@ display: inline-block;
 
 .img-thumbnail {
 	max-height:100px;
+}
+
+figure {
+	margin: 10px 0px;
 }
 
 figure figcaption {
