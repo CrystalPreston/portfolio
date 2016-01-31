@@ -35,10 +35,12 @@ display: block;
 .example_work figure {
 width: 30%;
 display: inline-block;
+position: relative;
+overflow:hidden;
 }
 
 .example_work figure img {
-	width: 300px;
+	width: 120%;
 	display: inline-block;
 	position: relative;
 }
@@ -51,6 +53,12 @@ figure {
 	margin: 10px 0px;
 }
 
+figure div {
+	min-height: 150px;
+	min-width:100px;
+	width: 100%;
+}
+
 figure figcaption {
 color: #444;
 opacity: 0.8;
@@ -60,4 +68,47 @@ height: 50px;
 font-weight: bold;
 }
 
+.featurette-image {
+background-size: 500px;
+}
+
+.cmt {
+	background-image: url('images/portfolio/redeye/cmt.png');
+}
+
+.seg {
+	background-image: url('images/portfolio/redeye/seg.png');
+}
+
+.placeholder-construction {
+	background-image: url('images/portfolio/redeye/placeholder-construction.png');
+	background-size: 100%;
+	background-position: center top;
+}
+
+.servcrm {background-image: url('images/portfolio/ps/servcrm.png');}
+.web {background-image: url('images/portfolio/ps/web.png');}
+.cbswebportal   {background-image: url('images/portfolio/ps/cbswebportal.png');}          
+.dashboard         {background-image: url('images/portfolio/ps/dashboard.png');}      
+.salesandcalls {background-image: url('images/portfolio/ps/salesandcalls.png');}
+.salescalculator {background-image: url('images/portfolio/ps/salescalculator.png');}
+
+.jiggle{
+-webkit-transition-duration: 0.8s;
+-moz-transition-duration: 0.8s;
+-o-transition-duration: 0.8s;
+transition-duration: 0.8s;
+-webkit-transition-property: -webkit-transform;
+-moz-transition-property: -moz-transform;
+-o-transition-property: -o-transform;
+transition-property: transform;
+overflow:hidden;
+}
+
+.jiggle img:hover
+{
+-webkit-transform:rotate(-15deg);
+-moz-transform:rotate(-15deg);
+-o-transform:rotate(-15deg);
+}
 
