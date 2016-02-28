@@ -112,3 +112,7 @@ overflow:hidden;
 -o-transform:rotate(-15deg);
 }
 
+.dehighlight {
+font-size: 15px;
+color: #aaa;
+}

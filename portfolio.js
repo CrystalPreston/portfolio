@@ -1,59 +1,52 @@
 if (Meteor.isClient || Meteor.isServer) {
 
-Router.map(function () {
-  this.route('/', {
-  path: '/',
-  template: 'layout',
-  layoutTemplate: 'home'
-  });
+Router.configure({
+  layout: 'main_template'
 });
 
-Router.map(function () {
-  this.route('/portfolio', {
-  path: '/portfolio',
-  template: 'layout',
-  layoutTemplate: 'portfolio'
-  });
+Router.route('/', function () {
+  this.layout('main_template');
+  this.render('home');
 });
 
-Router.map(function () {
-  this.route('/work', {
-  path: '/work',
-  template: 'layout',
-  layoutTemplate: 'work'
-  });
-});
-  
-Router.map(function () {
-  this.route('/play', {
-  path: '/play',
-  template: 'layout',
-  layoutTemplate: 'play'
-  });
+Router.route('/portfolio', function () {
+  this.layout('main_template');
+  this.render('portfolio_work');
 });
 
-Router.map(function () {
-  this.route('/qualifications', {
-  path: '/qualifications',
-  template: 'layout',
-  layoutTemplate: 'qualifications'
-  });
+Router.route('/work', function () {
+  this.layout('main_template');
+  this.render('work');
 });
 
-Router.map(function () {
-  this.route('/skills', {
-  path: '/skills',
-  template: 'layout',
-  layoutTemplate: 'skills'
-  });
+Router.route('/play', function() {
+  this.layout('main_template');
+  this.render('play');
 });
-  
-  }
 
-if (Meteor.isServer) {
+Router.route('/qualifications', function() {
+  this.layout('main_template');
+  this.render('qualifications');
+});
+
+Router.route('/skills', function() {
+  this.layout('main_template');
+  this.render('skills');
+});
+
   Meteor.startup(function () {
     // code to run on server at startup
   });
-  
-
+ 
 }
+
+// $(function() {
+
+// $.fn.makeItBigger = function() {
+//     this.css( "color", "green" );
+// };
+
+// $( "a" ).makeItBigger(); 
+
+
+// });

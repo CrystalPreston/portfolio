@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <title>Crystalline Development</title>
 
@@ -11,9 +12,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-
+	<script type="text/javascript" src="js/plugins.js"></script>
 </head>
 <template name="main_template">
+<body>
 <header>
 			<h1>CrystalLi<sup>a</sup>n<sub>n</sub>e</h1>
 		</header>
@@ -42,6 +44,10 @@
             </ul>
         </div>
 	</div>
+	<div class="main_content">
+	{{> yield}}
+	</div>
+	</body>
 </template>
 <template name="about">
     <div class="col-md-9">
@@ -51,15 +57,20 @@
             <h2 class="featurette-heading">About Me
                 <span class="text-muted">Crystal Lianne</span>
             </h2>
-            <p class="lead">My name is Crystal (Cris or Crissy for short).  I became a Software Developer proffessionally after graduating from University in 2012.</p>
-			<p>I'm an avid fan of logic and problem solving and as a result, currently work in largely JavaScript and PHP, rather than UX/UI design.</p>
-			<p>I particularly enjoy working on projects in which business processes are made more efficient, for instance re-factoring, unit testing and creating small automated scripts that handle previously manually controlled tasks.</p>
+          
+<p class="lead">Hi!  My name is Crystal Lianne (although I prefer Cris or Crystie).  I’ve had a massive passion for developing software from an early age, so career choice was easy for me.</p>
+<p>I currently work as a Software Developer at RedEye International assisting in the development of our tool which facilitates personalised e-mail marketing for medium to large businesses.</p>
+<p>Prior to this I was working for a small company based in High Wycombe creating and maintaining stand alone web applications that optimised specific workflow of their two current client-based CRM software.</p>
+<p>During school and college I took every IT based course available to me and I was thrilled to finally reach university age where I was able to undertake a Web Development course, for which I achieved a first class degree.</p>
+<p>I adore challenges and complex problem solving and in my current role largely work with JavaScript and PHP.  I’m a strong believer that programming skills are transposable, so regardless of the stack used, I’m really enthusiastic about learning new things, as is reflected on the skills and previous work experience.</p>
+<p>I’m in love with programming and I’m looking for a company that has a similar passion for maintainable, reusable, performant code.</p>
+
 			<div class="social_icons">
-			<figure class="icon"><a href="" class="jiggle" title="twitter"><img class="img-responsive pull-left" alt="twitter" src="images/twitter-ss.png"></a></figure>
-			<figure class="icon"><a href="" class="jiggle" title="linkedin"><img class="img-responsive pull-left" alt="linkedin" title="linkedin" src="images/linkedin-ss.png"></a></figure>
-			<figure class="icon"><a href="" class="jiggle" title="email"><img class="img-responsive pull-left" alt="email" title="email" src="images/email-ss.png"></a></figure>              
-			<figure class="icon"><a href="" class="jiggle" title="CV"><img class="img-responsive pull-left" alt="cv" title="cv" src="images/cv-ss.png"></a></figure>              
-			<figure class="icon"><a href="" class="jiggle" title="Call me maybe?"><img class="img-responsive pull-left" alt="Call me maybe?"  src="images/phone-ss.png"></a></figure>        
+			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="My personal account - you've been warned!" title="My personal account - you've been warned!" src="images/twitter-ss.png"></a></figure>
+			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="Much like a CV, only it has the added advantage of the company owning a lot of valuable data about you that can be exported at the click of a button." title="Much like a CV, only it has the added advantage of the company owning a lot of valuable data about you that can be exported at the click of a button." src="images/linkedin-ss.png"></a></figure>
+			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="Electronic mail - Like regular mail, but gets delivered directly to you - rather than being thrown over your back fence." title="Electronic mail - Like regular mail, but gets delivered directly to you - rather than being thrown over your back fence." src="images/email-ss.png"></a></figure>              
+			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="Curriculum Vitae - Loosely translated from Latin as 'course of [my] life' aka 'stuff I have done and things'" title="Curriculum Vitae - Loosely translated from Latin as 'course of [my] life' aka 'stuff I have done and things'" src="images/cv-ss.png"></a></figure>              
+			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="I know we've just met, and this is crazy, but here's my number, call me maybe?" title="I know we've just met, and this is crazy, but here's my number, call me maybe?"  src="images/phone-ss.png"></a></figure>        
 			</div>			
 	   </div>
 		</div>
@@ -75,9 +86,9 @@
             </h2>
             <p class="lead">June 2015 (Ongoing)</p>
 			<div class="example_work">
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left cmt"></div><figcaption>CMT</figcaption></figure>
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left seg"></div><figcaption>Segmentation Tool</figcaption></figure>
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left placeholder-construction"></div><figcaption>Admin panel</figcaption></figure>                      
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left cmt"></div><figcaption>CMT</figcaption></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left seg"></div><figcaption>Segmentation Tool</figcaption></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left placeholder-construction"></div><figcaption>Admin panel</figcaption></figure>                      
 			</div>			
 	   </div>
         <div class="featurette" id="ps">
@@ -87,12 +98,12 @@
             </h2>
             <p class="lead">September 2012 - June 2015.</p>
 			<div class="example_work">
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left servcrm"></div><figcaption>2ServCRM</figcaption></figure>
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left web"></div><figcaption>2Web</figcaption></figure>
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left cbswebportal"></div><figcaption>CBS Web Portal</figcaption></figure>              
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left dashboard"></div><figcaption>Dashboard</figcaption></figure>              
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left salesandcalls"></div><figcaption>Sales And Calls App</figcaption></figure>
-			<figure><div class="featurette-image img-thumbnail img-responsive pull-left salescalculator"></div><figcaption>Sales Calculator</figcaption></figure>        
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left servcrm"></div><figcaption>2ServCRM</figcaption></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left web"></div><figcaption>2Web</figcaption></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left cbswebportal"></div><figcaption>CBS Web Portal</figcaption></figure>              
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left dashboard"></div><figcaption>Dashboard</figcaption></figure>              
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left salesandcalls"></div><figcaption>Sales And Calls App</figcaption></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left salescalculator"></div><figcaption>Sales Calculator</figcaption></figure>        
 			</div>			
 	   </div>
 		</div>
@@ -219,10 +230,10 @@
                 <span class="text-muted">Front End</span>
             </h2>
 <div class="col-md-9">
-<h3>HTML</h3>
-<h3>CSS</h3>
-<h3>Javascript / Jquery / AJAX</h3>
-<h3>ASP.NET / ASP MVC 4</h3>
+<h3>HTML <span class="dehighlight">(5)</span></h3>
+<h3>CSS <span class="dehighlight">(3, SASS, LESS)</span></h3>
+<h3>Javascript <span class="dehighlight">(Vanilla, jQuery, AJAX)</span></h3>
+<h3>ASP.NET <span class="dehighlight">(.NET, MVC 4)</span></h3>
 </div>
 </div>
 </div>
@@ -235,8 +246,11 @@
 <div class="col-md-9">
 <h3>PHP</h3>
 <h3>VB.NET</h3>
-<h3>SQL (MySQL, PLSql)</h3>
+<h3>SQL <span class="dehighlight">(My, PL)</span></h3>
 <h3>XML, JSON</h3>
+<h3>MVC</h3>
+<h3>OOP</h3>
+<h3>DBMS <span class="dehighlight">(Oracle, MySQL, PIC)</span></h3>
 </div>
 </div>
 </div>
@@ -256,31 +270,26 @@
 </div>
 </template>
 <template name="home">
-{{> main_template }}
+
 {{> about }}
 </template>
 
 <template name="skills">
-{{> main_template }}
 {{> skills_table }}
 </template>
 
 <template name="portfolio">
-{{> main_template }}
 {{> portfolio_work }}
 </template>
 
 <template name="work">
-{{> main_template }}
 {{> work_table }}
 </template>
 
 <template name="play">
-{{> main_template }}
 {{> play_table }}
 </template>
 
 <template name="qualifications">
-{{> main_template }}
 {{> qualifications_table }}
 </template>
