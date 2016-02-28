@@ -12,10 +12,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-	<script type="text/javascript" src="js/plugins.js"></script>
 </head>
 <template name="main_template">
-<body>
+<!--<body>-->
 <header>
 			<h1>CrystalLi<sup>a</sup>n<sub>n</sub>e</h1>
 		</header>
@@ -47,7 +46,8 @@
 	<div class="main_content">
 	{{> yield}}
 	</div>
-	</body>
+		<script type="text/javascript" src="js/plugins.js"></script>
+	<!--</body>-->
 </template>
 <template name="about">
     <div class="col-md-9">
@@ -85,10 +85,11 @@
                 <span class="text-muted">RedEye</span>
             </h2>
             <p class="lead">June 2015 (Ongoing)</p>
+			<div class="preview_div"></div>
 			<div class="example_work">
-			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left cmt"></div><figcaption>CMT</figcaption></figure>
-			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left seg"></div><figcaption>Segmentation Tool</figcaption></figure>
-			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left placeholder-construction"></div><figcaption>Admin panel</figcaption></figure>                      
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left cmt"></div><figcaption>CMT</figcaption><div class="description"></div><a class="close_box" href="">x</a></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left seg"></div><figcaption>Segmentation Tool</figcaption><div class="description"></div><a class="close_box" href="">x</a></figure>
+			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left placeholder-construction"></div><figcaption>Admin panel</figcaption><div class="description"></div><a class="close_box" href="">x</a></figure>                      
 			</div>			
 	   </div>
         <div class="featurette" id="ps">
@@ -97,6 +98,7 @@
                 <span class="text-muted">Purpose Software</span>
             </h2>
             <p class="lead">September 2012 - June 2015.</p>
+			<div class="preview_div"></div>
 			<div class="example_work">
 			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left servcrm"></div><figcaption>2ServCRM</figcaption></figure>
 			<figure><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left web"></div><figcaption>2Web</figcaption></figure>
@@ -148,6 +150,7 @@
 </template>
 <template name="play_table">
 <div class="col-md-9">
+
         <!-- First Featurette -->
 		<div class="featurette" id="ps">
             <img class="img-responsive pull-right" src="images/portfolio/play/beaconnected/bc-logo.jpg" style="width: 200px; background-color: #444;padding: 10px;">
