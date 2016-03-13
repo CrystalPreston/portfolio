@@ -33,20 +33,20 @@ display: block;
 }
 
 .example_work figure {
-width: 30%;
+width: 100%;
 display: inline-block;
 position: relative;
 overflow:hidden;
 }
 
 .example_work figure img {
-	width: 120%;
+	width: 300px;
 	display: inline-block;
 	position: relative;
 }
 
 .img-thumbnail {
-	max-height:100px;
+	max-height:200px;
 }
 
 figure {
@@ -64,17 +64,27 @@ color: #444;
 opacity: 0.8;
 text-align:center;
 margin: 0 auto;
-height: 50px;
-font-weight: bold;
-max-width: 300px;
-height: 20px;
-positio: relative;
+}
+
+figure figcaption .bold-header {
+	font-weight: bold;
+}
+
+figure figcaption .italic {
+	font-style: italic;
+}
+
+figure figcaption .bold-blue {
+	color: #0066FF;
+	font-weight: bold;
+	text-align: right;
+	
 }
 
 .featurette-image {
 background-size: 500px;
 position: relative;
-max-width: 300px;
+max-width: 300px !important;
 }
 
 .preview_div figure {
@@ -141,6 +151,7 @@ max-width: 300px;
 .dashboard         {background-image: url('images/portfolio/ps/dashboard.png');}      
 .salesandcalls {background-image: url('images/portfolio/ps/salesandcalls.png');}
 .salescalculator {background-image: url('images/portfolio/ps/salescalculator.png');}
+.linkit {background-image: url('images/portfolio/ps/linkit-3-screen.png');}
 
 .jiggle{
 -webkit-transition-duration: 0.8s;
@@ -173,4 +184,8 @@ color: #aaa;
 	height: 25px;
 	top: 0px;
 	right: 0px;
+}
+
+.img-responsive.pull-right {
+	margin-top: 20px;
 }
