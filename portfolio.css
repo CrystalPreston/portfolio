@@ -3,6 +3,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	position: relaive;
+}
+
 header {
 	background: #000;
 }
@@ -12,9 +16,12 @@ header h1 {
 	margin: 0px;
 }
 
-#sidebar-wrapper {
-
+.main_content {
+	background-color: #fff;
+	position: relative;
+	
 }
+
 
 .social_icons {
 position: relative;
@@ -74,7 +81,7 @@ figure figcaption .italic {
 	font-style: italic;
 }
 
-figure figcaption .bold-blue {
+.bold-blue {
 	color: #0066FF;
 	font-weight: bold;
 	text-align: right;
@@ -85,6 +92,11 @@ figure figcaption .bold-blue {
 background-size: 500px;
 position: relative;
 max-width: 300px !important;
+}
+
+.document {
+float: left;
+clear: both;
 }
 
 .preview_div figure {
@@ -131,20 +143,13 @@ max-width: 300px !important;
 	top: 0px;
 }
 
-.cmt {
-	background-image: url('images/portfolio/redeye/cmt.png');
-}
-
-.seg {
-	background-image: url('images/portfolio/redeye/seg.png');
-}
-
+.cmt {background-image: url('images/portfolio/redeye/cmt.png');}
+.seg {background-image: url('images/portfolio/redeye/seg.png');}
 .placeholder-construction {
 	background-image: url('images/portfolio/redeye/placeholder-construction.png');
 	background-size: 100%;
 	background-position: center top;
 }
-
 .servcrm {background-image: url('images/portfolio/ps/servcrm.png');}
 .web {background-image: url('images/portfolio/ps/web.png');}
 .cbswebportal   {background-image: url('images/portfolio/ps/cbswebportal.png');}          
@@ -152,6 +157,7 @@ max-width: 300px !important;
 .salesandcalls {background-image: url('images/portfolio/ps/salesandcalls.png');}
 .salescalculator {background-image: url('images/portfolio/ps/salescalculator.png');}
 .linkit {background-image: url('images/portfolio/ps/linkit-3-screen.png');}
+.unit-testing {background-image: url('images/portfolio/redeye/unit-testing-sandstone.png'); background-size: 120px 90px;background-repeat:no-repeat;background-position: center;}
 
 .jiggle{
 -webkit-transition-duration: 0.8s;
@@ -177,15 +183,30 @@ font-size: 15px;
 color: #aaa;
 }
 
-.close_box {
-	border: 3px solid #0f0;
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	top: 0px;
-	right: 0px;
-}
 
 .img-responsive.pull-right {
 	margin-top: 20px;
 }
+
+h3 {
+	display: inline-block;
+}
+
+.main-logo {
+height: 50px;
+padding: 10px 10px 10px 0px;
+}
+
+.page-intro, .page-content {
+ margin-top: -10px;
+ padding: 5px 10px 5px 280px;
+}
+
+.page-intro {
+	padding-top: 10px;
+}
+
+.page-content {
+	padding-top: 20px;
+}
+

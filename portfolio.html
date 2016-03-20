@@ -4,9 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-    <title>Crystalline Development</title>
+    <title>CrystalClearCode</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -15,13 +16,14 @@
 </head>
 <template name="main_template">
 <!--<body>-->
-<header>
-			<h1>CrystalLi<sup>a</sup>n<sub>n</sub>e</h1>
-		</header>
+<div class="wrapper">
         <!-- Sidebar -->
-		    <div class="col-md-3">
+		<div class="col-md-3 buffer">
+		<div id="wrapper">
         <div id="sidebar-wrapper">
+		
             <ul class="sidebar-nav">
+				<li><img src="images/crystal-logo.png" class="main-logo" alt= "Crystal Clear Code"/></li>
                 <li>
                     <a href="/">About</a>
                 </li>
@@ -43,22 +45,28 @@
             </ul>
         </div>
 	</div>
+	</div>
 	<div class="main_content">
 	{{> yield}}
 	</div>
 		<script type="text/javascript" src="js/plugins.js"></script>
+</div>
 	<!--</body>-->
 </template>
 <template name="about">
-    <div class="col-md-9">
+    <div class="col-md-12 content-column">
         <!-- First Featurette -->
         <div class="featurette" id="about">
             <img class="featurette-image img-circle img-responsive pull-right" src="images/me.jpg" style="width: 200px;height:200px;">
-            <h2 class="featurette-heading">About Me
-                <span class="text-muted">Crystal Lianne</span>
-            </h2>
+            <div class="page-intro">
+				<h2 class="featurette-heading">About Me
+					<span class="text-muted">Crystal Lianne</span>
+				</h2>
+			
           
 <p class="lead">Hi!  My name is Crystal Lianne (although I prefer Cris or Crystie).  I’ve had a massive passion for developing software from an early age, so career choice was easy for me.</p>
+</div>
+<div class="page-content">
 <p>I currently work as a Software Developer at RedEye International assisting in the development of our tool which facilitates personalised e-mail marketing for medium to large businesses.</p>
 <p>Prior to this I was working for a small company based in High Wycombe creating and maintaining stand alone web applications that optimised specific workflow of their two current client-based CRM software.</p>
 <p>During school and college I took every IT based course available to me and I was thrilled to finally reach university age where I was able to undertake a Web Development course, for which I achieved a first class degree.</p>
@@ -66,13 +74,14 @@
 <p>I’m in love with programming and I’m looking for a company that has a similar passion for maintainable, reusable, performant code.</p>
 
 			<div class="social_icons">
-			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="My personal account - you've been warned!" title="My personal account - you've been warned!" src="images/twitter-ss.png"></a></figure>
-			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="Much like a CV, only it has the added advantage of the company owning a lot of valuable data about you that can be exported at the click of a button." title="Much like a CV, only it has the added advantage of the company owning a lot of valuable data about you that can be exported at the click of a button." src="images/linkedin-ss.png"></a></figure>
-			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="Electronic mail - Like regular mail, but gets delivered directly to you - rather than being thrown over your back fence." title="Electronic mail - Like regular mail, but gets delivered directly to you - rather than being thrown over your back fence." src="images/email-ss.png"></a></figure>              
+			<figure class="icon"><a href="https://twitter.com/crystallianne" class="jiggle"><img class="img-responsive pull-left" alt="My personal account - you've been warned!" title="My personal account - you've been warned!" src="images/twitter-ss.png"></a></figure>
+			<figure class="icon"><a href="https://ca.linkedin.com/in/crystal-lianne-preston-89669138" class="jiggle"><img class="img-responsive pull-left" alt="Much like a CV, only it has the added advantage of the company owning a lot of valuable data about you that can be exported at the click of a button." title="Much like a CV, only it has the added advantage of the company owning a lot of valuable data about you that can be exported at the click of a button." src="images/linkedin-ss.png"></a></figure>
+			<figure class="icon"><a href="mailto:crystallianne@gmail.com" class="jiggle"><img class="img-responsive pull-left" alt="Electronic mail - Like regular mail, but gets delivered directly to you - rather than being thrown over your back fence." title="Electronic mail - Like regular mail, but gets delivered directly to you - rather than being thrown over your back fence." src="images/email-ss.png"></a></figure>              
 			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="Curriculum Vitae - Loosely translated from Latin as 'course of [my] life' aka 'stuff I have done and things'" title="Curriculum Vitae - Loosely translated from Latin as 'course of [my] life' aka 'stuff I have done and things'" src="images/cv-ss.png"></a></figure>              
-			<figure class="icon"><a href="" class="jiggle"><img class="img-responsive pull-left" alt="I know we've just met, and this is crazy, but here's my number, call me maybe?" title="I know we've just met, and this is crazy, but here's my number, call me maybe?"  src="images/phone-ss.png"></a></figure>        
+			<figure class="icon"><a href="tel:07807818552" class="jiggle"><img class="img-responsive pull-left" alt="I know we've just met, and this is crazy, but here's my number, call me maybe?" title="I know we've just met, and this is crazy, but here's my number, call me maybe?"  src="images/phone-ss.png"></a></figure>        
 			</div>			
 	   </div>
+		</div>
 		</div>
 
 </template>
@@ -95,7 +104,7 @@
 			<p class="bold-blue">HTML, CSS, JavaScript, PHP.  Lumen, Vagrant, GIT, MVC, OOP.</p>
 			</figcaption>
 			</figure>
-			<figure data-index="2"><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left placeholder-construction"></div>
+			<figure data-index="2"><div class="featurette-image portfolio-img img-thumbnail img-responsive pull-left unit-testing"></div>
 			<figcaption>
 			<p class="bold-header">Unit Testing</p>
 			<p>Created unit tests.  Built a complex utility that involves set up, loading data, callbacks and has made possible new, more complicated tests to be made.  Managed a small team working on functional and unit tests during a sprint.</p> 
@@ -228,27 +237,42 @@
 			<h3>Ongoing</h3>
 			<p>Initially prototyped for Hack Manchester 2015, Beconnected is a website that uses beacons to promote collaboration in open office areas.  It allows you to search for people, businesses and services that are in the geographical vicinity. A chat feature is currently under development which will allow one to communicate with people online once they have found a match.
 			</p>
+			<p class="bold-blue">HTML, CSS, JavaScript, Meteor</p>
 			</div>
         <!-- First Featurette -->
 		<div>
 		<div class="col-md-12">
 			<img class="img-responsive pull-right" src="images/portfolio/play/contournuity/contournuity-menu.png" style="width: 200px;">
-			<h2 class="featurette-heading">Pet Projects
+			<h2 class="featurette-heading">Hack Day Projects
 				<span class="text-muted">Contournuity</span>
 			</h2>
 			<h3>2016</h3>
 			<p>Contournuity (another pun - not spelt incorrectly), was another mini hackday project.  The aim was to create a desktop app prototype which gave users an easy-access menu (shown in picture), notifications and opened windows for frequently accessed data.  This prototype was created in 6 hours in a small team and the goal was achieved with a dummy dataset.
 			</p>
+			<p class="bold-blue">VB.NET</p>
 			</div>
 		</div>
 		<div>	
 			<div class="col-md-12">
 			<img class="img-responsive pull-right" src="images/portfolio/play/agrade/ag-logo.png" style="width: 200px;">		
-			<h2 class="featurette-heading">Pet Projects
+			<h2 class="featurette-heading">Small Business Projects
 				<span class="text-muted">A-Grade PC Solutions</span>
 			</h2>					
 				<h3>2015</h3>
 				<p>Small, simple website build for a start-up computer repair company.</p>
+				<p class="bold-blue">HTML, CSS, PHP</p>
+				
+			</div>
+		</div>
+		<div>	
+			<div class="col-md-12">
+			<img class="img-responsive pull-right" src="images/crystal-logo.png" style="width: 200px; background-color: #444; padding: 10px;">		
+			<h2 class="featurette-heading">Pet Projects
+				<span class="text-muted">Portfolio</span>
+			</h2>					
+				<h3>2016</h3>
+				<p>This website - thought technologies were worth a mention</p>
+				<p class="bold-blue">HTML, CSS, JavaScript, IronRouter, Meteor, Bootstrap, Backbone</p>
 			</div>
 		</div>
 </div>
@@ -257,52 +281,41 @@
 <template name="qualifications_table">
 <div class="col-md-9">
         <!-- First Featurette -->
-		<div class="featurette" id="ps">
-            <img class="img-responsive pull-right" src="images/portfolio/education/bucks/bnu-logo.png" style="width: 200px;">
+		<div class="featurette document col-md-12">
             <h2 class="featurette-heading">Bucks New Uni (High Wycombe)
-                <span class="text-muted">1st Class BSc</span>
+                <span class="text-muted">Web Development</span>
             </h2>
-<div class="col-md-2">
-<h3>2009-2012</h3>
+<div>
+<h3 class="featurette-heading">2009-2012 <span class="text-muted">1st Class Honours</span></h3>
+<img class="img-responsive pull-right" src="images/portfolio/education/bucks/bnu-logo.png" style="height: 50px;">
 </div>
-<div style="100%; display: block; float: none;">
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu orci ac dolor venenatis malesuada ut id ex. Nulla interdum mi orci, non placerat magna tincidunt varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris consequat mauris ac ante condimentum, et egestas magna pharetra. Integer sollicitudin pellentesque dolor ut rutrum. Curabitur bibendum cursus iaculis. Pellentesque ornare nisi sem.</p>
 </div>
-
-<div class="featurette" id="ps">
-            <img class="img-responsive pull-right" src="images/portfolio/education/sixthform/ssfc-logo.jpg" style="width: 200px;">
-            <h2 class="featurette-heading">Shrewsbury Sixthform (Shrewsbury)
-                <span class="text-muted">AS-Level IT</span>
-            </h2>
+<div class="featurette document col-md-12">
+	<h2 class="featurette-heading">Shrewsbury Sixthform (Shrewsbury)
+		<span class="text-muted">IT</span>
+	</h2>
 			
-			
-<div class="col-md-2">
-<h3>2007-2009</h3>
-</div>
-<div style="width: 100%; display: block; float: none;">
-	<p>Aliquam erat volutpat. Curabitur volutpat consectetur sem vitae accumsan. Praesent auctor quam vitae sem tempus, eu auctor purus luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis sapien ac mauris lacinia, a molestie mauris volutpat. Sed egestas laoreet sem, a posuere enim lacinia iaculis. Duis nulla felis, dignissim nec ex nec, maximus efficitur justo. Etiam eget imperdiet nibh. Phasellus efficitur lacinia efficitur. Duis tristique, magna vitae ornare euismod, enim mi blandit elit, ut pulvinar tortor sapien id nisl. Nulla sed tempor sem, vulputate porttitor metus. Aliquam a libero eget orci egestas hendrerit in in sapien. Aenean facilisis neque tellus, non condimentum est gravida vitae. Quisque commodo et elit non hendrerit.</p>
+<div>
+<h3 class="featurette-heading">2007-2009 <span class="text-muted">AS Level</span></h3>
+ <img class="img-responsive pull-right" src="images/portfolio/education/sixthform/ssfc-logo.jpg" style="height: 50px;">
 </div>
 </div>
-<div class="featurette" id="ps">
-            <img class="img-responsive pull-right" src="images/portfolio/education/grove/g-logo.png" style="width: 200px;">
+<div class="featurette document col-md-12">
             <h2 class="featurette-heading">The Grove School (Market Drayton)
-                <span class="text-muted">GNVQ ICT</span>
+                <span class="text-muted">ICT</span>
             </h2>
 			
 			
-<div class="col-md-2">
-<h3>2002-2007</h3>
-</div>
-<div style="width: 100%; display: block; float: none;">
-	<p>Aliquam erat volutpat. Curabitur volutpat consectetur sem vitae accumsan. Praesent auctor quam vitae sem tempus, eu auctor purus luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis sapien ac mauris lacinia, a molestie mauris volutpat. Sed egestas laoreet sem, a posuere enim lacinia iaculis. Duis nulla felis, dignissim nec ex nec, maximus efficitur justo. Etiam eget imperdiet nibh. Phasellus efficitur lacinia efficitur. Duis tristique, magna vitae ornare euismod, enim mi blandit elit, ut pulvinar tortor sapien id nisl. Nulla sed tempor sem, vulputate porttitor metus. Aliquam a libero eget orci egestas hendrerit in in sapien. Aenean facilisis neque tellus, non condimentum est gravida vitae. Quisque commodo et elit non hendrerit.</p>
+<div>
+<h3 class="featurette-heading">2002-2007 <span class="text-muted">GNVQ</span></h3>
+<img class="img-responsive pull-right" src="images/portfolio/education/grove/g-logo.png" style="width: 150px;">
 </div>
 </div>
 			</div>
-</div>
 </template>
 <template name="skills_table">
 
-<div class="col-md-3">
+<div class="col-md-2">
         <!-- First Featurette -->
 		<div class="featurette" id="ps">
             <h2 class="featurette-heading">Skills

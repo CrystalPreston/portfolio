@@ -12,10 +12,17 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+	background: #444;
+	position: relative;
+	display: block;
 }
 
 #wrapper.toggled {
     padding-left: 250px;
+}
+
+.page-intro {
+	background-color: #ccc;
 }
 
 #sidebar-wrapper {
@@ -31,6 +38,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+	top: 0px;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -79,6 +87,7 @@
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
+	color: #33ccff;
 }
 
 .sidebar-nav > .sidebar-brand {
